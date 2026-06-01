@@ -20,10 +20,20 @@ btn_no.addEventListener('click', function() {
     alert('¿Cómo de que no? 😥😢😰😭');
 });
 
-btn_si.addEventListener('click', function() { 
+btn_si.addEventListener('click', function() {
     clearInterval(tim);
     btn_no.remove();
-    alert('Sabía que dirías que SÍ. Nos casamos? 💖');
+
+    const mensaje = encodeURIComponent(
+        "Siiii ❤️ Acepto ser tu novia 🥰"
+    );
+
+    alert("Sabía que dirías que sí, Vanessa 💖");
+
+    window.open(
+        "https://wa.me/5213310983477?text=" + mensaje,
+        "_blank"
+    );
 });
 
 function rogar() {
@@ -41,12 +51,12 @@ function rogar() {
 }
 
 const mensajes = [
-    "¿Segura? 🥺",
-    "Piénsalo bien 💕",
-    "Te invito unos tacos 🌮",
-    "Por favor 😭",
+    "¿Segura, Vanessa? 🥺",
+    "Piénsalo bien, bonita 💕",
+    "Te invito algo fresquito 🧋",
+    "Por favor, Vane 😭",
     "Mira al perrito 🐶",
-    "Última oportunidad 😅"
+    "Última oportunidad, Vanessa 😅"
 ];
 
 btn_no.addEventListener('mouseenter', function(e) {
