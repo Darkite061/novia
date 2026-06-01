@@ -28,7 +28,7 @@ btn_si.addEventListener('click', function() {
         "Siiii ❤️ Acepto ser tu novia 🥰"
     );
 
-    alert("Sabía que dirías que sí, Vanessa 💖");
+    alert("Sabía que dirías que sí, Vanesa 💖");
 
     window.open(
         "https://wa.me/5213310983477?text=" + mensaje,
@@ -51,12 +51,12 @@ function rogar() {
 }
 
 const mensajes = [
-    "¿Segura, Vanessa? 🥺",
+    "¿Segura, Vanesa? 🥺",
     "Piénsalo bien, bonita 💕",
     "Te invito algo fresquito 🧋",
     "Por favor, Vane 😭",
     "Mira al perrito 🐶",
-    "Última oportunidad, Vanessa 😅"
+    "Última oportunidad, Vanesa 😅"
 ];
 
 function moverBoton(e){
