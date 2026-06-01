@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    background:
+        linear-gradient(rgba(255, 75, 145, 0.45), rgba(80, 0, 60, 0.75)),
+        url("https://www.soycarmin.com/__export/1455477920935/sites/debate/img/celebs/2016/02/14/corazon-con-manos-1481.jpg_242310155.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.Contenedor {
+    min-height: 100vh;
+    padding: 18px;
+}
+
+.Contenedor-Perro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.Contenedor-Perro img {
+    width: 270px;
+    max-width: 82vw;
+    padding: 12px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.25);
+    border: 3px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    animation: entrada 0.7s ease;
+}
+
+.Con {
+    width: fit-content;
+    max-width: 92vw;
+    margin: 18px auto 0 auto;
+    padding: 22px 26px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.25);
+    border: 3px solid rgba(255, 255, 255, 0.65);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    text-align: center;
+}
+
+#DiQueSi {
+    margin: 0 0 18px 0;
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: white;
+    -webkit-text-stroke: 1px #ff2f92;
+    text-shadow:
+        0 0 10px #ff2f92,
+        0 0 20px #ff8ac7,
+        0 0 35px white;
+    animation: latido 1.2s infinite;
+}
+
+button {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    padding: 13px 22px;
+    margin: 8px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.28);
+    white-space: nowrap;
+}
+
+#btn_si {
+    background: linear-gradient(135deg, #ff1f8f, #ff83c7);
+    color: white;
+    border: 3px solid white;
+}
+
+#btn_si:hover {
+    transform: scale(1.12) rotate(-2deg);
+    box-shadow: 0 0 25px #ffb3d9;
+}
+
+#btn_no {
+    background: linear-gradient(135deg, #222, #555);
+    color: white;
+    border: 3px solid #ffb3d9;
+    z-index: 9999;
+}
+
+#btn_no:hover {
+    transform: scale(0.95);
+}
+
+.Contenedor-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+}
+
+#gif {
+    width: 210px;
+    max-width: 70vw;
+    max-height: 170px;
+    overflow: hidden;
+}
+
+#gif img {
+    width: 100%;
+    max-height: 170px;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 3px solid rgba(255,255,255,0.8);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+    animation: entrada 0.5s ease;
+}
+
+body::before {
+    content: "💖";
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    font-size: 80px;
+    opacity: 0.35;
+    animation: flotar 3s infinite ease-in-out;
+    pointer-events: none;
+}
+
+body::after {
+    content: "💕";
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    font-size: 80px;
+    opacity: 0.35;
+    animation: latido 1.4s infinite;
+    pointer-events: none;
+}
+
+@keyframes entrada {
+    from {
+        opacity: 0;
+        transform: scale(0.85) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes latido {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@media (max-height: 680px) {
+    .Contenedor-Perro img {
+        width: 210px;
+    }
+
+    .Con {
+        padding: 16px 20px;
+        margin-top: 12px;
+    }
+
+    #DiQueSi {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        font-size: 17px;
+        padding: 10px 16px;
+    }
+
+    #gif {
+        width: 170px;
+        max-height: 120px;
+    }
+
+    #gif img {
+        max-height: 120px;
+    }
+}
+
+@media (max-width: 600px) {
+    .Contenedor-Perro img {
+        width: 220px;
+    }
+
+    #DiQueSi {
+        font-size: 30px;
+    }
+
+    button {
+        font-size: 17px;
+        padding: 11px 16px;
+    }
+
+    #gif {
+        width: 180px;
+    }
+}
