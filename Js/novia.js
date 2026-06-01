@@ -16,9 +16,9 @@ let btn_no = document.querySelector('#btn_no');
 const gif = document.getElementById("gif");
 
 
-btn_no.addEventListener('click', function() {
-    alert('¿Cómo de que no? 😥😢😰😭');
-});
+// btn_no.addEventListener('click', function() {
+//     alert('¿Cómo de que no? 😥😢😰😭');
+// });
 
 btn_si.addEventListener('click', function() {
     clearInterval(tim);
