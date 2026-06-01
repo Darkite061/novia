@@ -59,11 +59,17 @@ const mensajes = [
     "Última oportunidad, Vanessa 😅"
 ];
 
-btn_no.addEventListener('mouseenter', function(e) {
+function moverBoton(e){
+    moveElmRandom(e.target);
+
     e.target.innerText =
         mensajes[Math.floor(Math.random() * mensajes.length)];
+}
 
-    moveElmRandom(e.target);
+btn_no.addEventListener('mouseenter', moverBoton);
+btn_no.addEventListener('touchstart', function(e){
+    e.preventDefault();
+    moverBoton(e);
 });
 
 var tim = setInterval(rogar, 8000);
